@@ -17,7 +17,7 @@ const MyCollection = ({ data }) => {
         <>
             {(!catchPokemon) ? <h1>Loading...</h1> :(
             <>
-                <h1>My Collection</h1>
+                <h1>My Pokeball</h1>
                 <div className="left-content">
                     {
                         catchPokemon.map((data, i) => {
