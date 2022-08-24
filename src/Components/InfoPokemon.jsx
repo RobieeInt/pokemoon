@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useLocalStorage from "./useLocalStorage";
 
 const InfoPokemon = () => {
@@ -8,7 +8,7 @@ const InfoPokemon = () => {
     // console.log(id);
 
     //get pokemon data from api
-    const [pokemon, setPokemon] = useLocalStorage("pokemon", []);
+    const [pokemon, setPokemon] = useState();
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
