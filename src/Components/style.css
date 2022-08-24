@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    background-color: #BDEDFF;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    paddint-top: 100px;
+    display: flex;
+
+}
+
+.left-content, .right-content{
+    flex-basis: 50%;
+}
+
+.left-content{
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.right-content{
+    width: 50%;
+    text-align: center;
+    color: #000;
+    top:100px;
+    right: 10px;
+}
+
+.right-content img{
+    margin: 2rem;
+    height: 180px;
+}
+
+.right-content h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.types{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.types .group{
+    background-color: #C3BDFF;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.moves{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.moves .group{
+    background-color: #C3BDFF;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    display: grid;
+    /* grid-template-columns: repeat(2, 0.5fr); */
+}
+
+
+
+.owns{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.owns .group{
+    background-color: #C3BDFF;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.card {
+    width: 100%;
+    background-color:#9EDEF9;
+    border-radius: 6rem;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    /* margin-top: 10rem; */
+    
+}
+.card-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.catch-pokemon-btn{
+    background-color: #00BFFF;
+    border-radius: 6rem;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.info-pokemon-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.divider{
+    width: 90%;
+    height: 5px;
+    background-color: #000;
+    margin-top: 1rem;
+    margin-left: 7rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-group{
+    display: flex;
+    content-align: center;
+}
+
+.btn-group button{
+    outline: none;
+    border: none;
+    width: 150px;
+    padding: 0.3rem 0;
+    margin: 1rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background-color: #b74555;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-catch{
+    background-color: #00BFFF;
+    border-radius: 6rem;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.center{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card h3{
+    margin-left : 1rem;
+    margin-right : 1rem;
+}
