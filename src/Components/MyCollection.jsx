@@ -11,7 +11,7 @@ const MyCollection = ({ data }) => {
     }
         , [catchPokemon])
     const OwnPokemon = JSON.parse(localStorage.getItem("catchPokemon"));
-    console.log(OwnPokemon);
+    // console.log(OwnPokemon);
 
     return (
         <>

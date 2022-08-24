@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import useLocalStorage from "./useLocalStorage";
-import { Link } from 'react-router-dom';
 
-const InfoPokemon = ({ data }) => {
+const InfoPokemon = () => {
    
     // get pokemon by id from url
     const id = window.location.pathname.split("/")[2];
-    console.log(id);
+    // console.log(id);
 
     //get pokemon data from api
     const [pokemon, setPokemon] = useLocalStorage("pokemon", []);
@@ -26,7 +25,7 @@ const InfoPokemon = ({ data }) => {
     }, [catchPokemon])
 
     const OwnPokemon = JSON.parse(localStorage.getItem("catchPokemon"));
-    console.log(OwnPokemon);
+    // console.log(OwnPokemon);
     
 
     return (

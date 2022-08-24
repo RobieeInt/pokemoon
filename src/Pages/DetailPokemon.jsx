@@ -8,7 +8,7 @@ const DetailPokemon = ({ item }) => {
   
   return (
             <div className="right-content">
-                <InfoPokemon data={item} />
+                <InfoPokemon />
             </div>
   )
 }
