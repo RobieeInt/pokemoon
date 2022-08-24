@@ -1,6 +1,7 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useLocalStorage from "./useLocalStorage";
+import { Link } from 'react-router-dom';
     
     
 const Card = ({ pokemon, loading, infoPokemon}) => {
@@ -9,30 +10,27 @@ const Card = ({ pokemon, loading, infoPokemon}) => {
     const [catchPokemon, setCatchPokemon] = useLocalStorage("catchPokemon", []);
     useEffect(() => {
         // console.log(catchPokemon);
-    } ,[catchPokemon])
+    }, [catchPokemon])
+    
+    
+    const [pokeDex,setPokeDex]=useState();
+
     return (
         <>
         {
             loading ? <h1>Loading...</h1> :
-                pokemon.map((item, i) => {
-                    //count pokemon in local storage
-                    const count = catchPokemon.filter(pokemon => pokemon.name === item.name).length;
+                pokemon.map((data, i) => {
                     return (
                         <>
                             <div className="group" key={i}>
-                                <div className="card" onClick={() => infoPokemon(item)}>
-                                    <h3>{item.name}</h3>
-                                <img src={item.sprites.front_default} alt="" />
-                                    <button className="btn-catch" onClick={() => {
-                                        // windows prompt giving name to pokemon
-                                        const Own = window.prompt("Enter your Pokemon name");
-                                        // concat namePokemon to catchPokemon
-                                        setCatchPokemon([...catchPokemon, {Own: Own, pokemonData: item}]);
-                                    infoPokemon(item);
-                                }
-                                }>Catch</button>
-                                <h3>{count}</h3>
+                                <Link to={`/detail/${data.id}`} onClick={() => infoPokemon(data)}>
+                                    
+                                <div className="card" onClick={() => infoPokemon(data)}>
+                                        <h3>{data.name}</h3>
+                                        
+                                <img src={data.sprites.front_default} alt="" />
                                 </div>
+                                </Link>
                             </div>
                         </>
                     )

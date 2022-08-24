@@ -20,12 +20,13 @@ body{
 }
 
 .left-content, .right-content{
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
 }
 
 .left-content{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-columns: repeat(5, 0.5fr);
     grid-gap: 5rem;
     justify-content: center;
     align-items: center;
@@ -33,7 +34,7 @@ body{
 }
 
 .right-content{
-    width: 50%;
+    width: 100%;
     text-align: center;
     color: #000;
     top:100px;
@@ -71,7 +72,7 @@ body{
 }
 
 .moves{
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     margin-top: 1rem;
@@ -131,6 +132,8 @@ body{
     /* margin-top: 10rem; */
     
 }
+
+
 .card-img{
     width: 100px;
     height: 100px;
@@ -184,10 +187,14 @@ body{
     background-color: #b74555;
     border-radius: 8px;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+
 }
 
 .btn-catch{
-    background-color: #00BFFF;
+    background-color: #8F3152;
     border-radius: 6rem;
     color: #fff;
     font-size: 1.2rem;
@@ -197,6 +204,47 @@ body{
     transition: 0.5s;
     margin-right: 1rem;
     margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-link{
+    outline: none;
+    border: none;
+    width: 150px;
+    padding: 0.3rem 0;
+    margin: 1rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background-color: #5BAF44;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    text-decoration: none;
+    display: flex;
+    content-align: center;
+}
+
+.btn-delete{
+    outline: none;
+    border: none;
+    width: 150px;
+    padding: 0.3rem 0;
+    margin: 1rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background-color: #5F000B;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    text-decoration: none;
+    display: flex;
+    content-align: center;
 }
 
 .center{

@@ -1,8 +1,9 @@
 import React from "react";
-import Card from "./Card";
-import InfoPokemon from "./InfoPokemon";
+import InfoPokemon from "../Components/InfoPokemon";
+import Card from "../Components/Card";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 const Main = () => {
 
@@ -55,9 +56,12 @@ const Main = () => {
     
     
     return (
+
         <div className="container">
             <div className="left-content">
-                <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)} />
+                
+                {/* mypokemon page */}
+                    <Card pokemon={pokeData} loading={loading} infoPokemon={poke => setPokeDex(poke)}  />
                 <div className="btn-group">
                     {
                         prevUrl && <button onClick={() => {
@@ -71,10 +75,8 @@ const Main = () => {
                         setUrl(nextUrl)
                     }}>Next</button>
                     }
+                    <Link className="btn-link" to="/mypokemon"> My Pokeball</Link>
                 </div>
-            </div>
-            <div className="right-content">
-                <InfoPokemon data={pokeDex} />
             </div>
         </div>
     );
