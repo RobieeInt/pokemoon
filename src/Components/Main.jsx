@@ -8,7 +8,7 @@ const Main = () => {
 
     // call api 1 time
     
-    let pokeUrl = "http://pokeapi.co/api/v2/pokemon/";
+    let pokeUrl = "https://pokeapi.co/api/v2/pokemon/";
 
     const [pokeData,setPokeData]=useState([]);
     const [loading,setLoading]=useState(true);
