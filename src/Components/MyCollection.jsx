@@ -13,6 +13,8 @@ const MyCollection = ({ data }) => {
     const OwnPokemon = JSON.parse(localStorage.getItem("catchPokemon"));
     // console.log(OwnPokemon);
 
+    console.log(catchPokemon);
+
     return (
         <>
             {(!catchPokemon) ? <h1>Loading...</h1> :(
@@ -24,7 +26,7 @@ const MyCollection = ({ data }) => {
                             return (
                                 <>
                                     <div className="group" key={i}>
-                                <Link to={`/detail/${data.id}`}> 
+                                <Link to={`/detail/${data.pokemonData.id}`}> 
                                 <div className="card">
                                         <h3>{data.Own}</h3>
                                             <img src={data.pokemonData.sprites.front_default} alt="" />
