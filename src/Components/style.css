@@ -358,3 +358,9 @@ body.active-modal {
     margin-top: 3rem;
     text-color: #fff;
 }
+
+.arena-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
