@@ -19,10 +19,6 @@ body{
 
 }
 
-.left-content, .right-content{
-    /* flex-basis: 50%; */
-}
-
 .left-content{
     width: 100%;
     display: grid;
@@ -95,7 +91,6 @@ body{
     margin-bottom: 1rem;
     width: 80%;
     display: grid;
-    /* grid-template-columns: repeat(2, 0.5fr); */
 }
 
 
@@ -129,7 +124,6 @@ body{
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    /* margin-top: 10rem; */
     
 }
 
