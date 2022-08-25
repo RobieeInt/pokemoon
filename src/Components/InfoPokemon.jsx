@@ -77,7 +77,7 @@ const InfoPokemon = () => {
                         <Navbar />
                         <h1>{pokemon.name}</h1>
                         <img className="info-pokemon-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`} alt="" />
-                        <h2><button className="btn-catch" onClick={toggleModal}>Modal</button></h2>
+                        {/* <h2><button className="btn-catch" onClick={toggleModal}>Modal</button></h2> */}
                         <h2><button className="btn-catch" onClick={() => {
                             if (randomValueget > 50) {
                                 
