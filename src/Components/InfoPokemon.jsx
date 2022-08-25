@@ -49,31 +49,7 @@ const InfoPokemon = () => {
     
     // console.log(randomValueget);
 
-    //handleInputvalidation
-    const handleInputvalidation = (e) => {
-        const { pokemonName } = e.target;
-        if (pokemonName.length > 0) {
-            setCatchPokemon(pokemonName);
-        } else if (pokemonName.length === '') {
-            return alert("Please enter a name");
-        } else if (pokemonName.length === null) {
-            return alert("Name must be at least 3 characters");
-        } else if (pokemonName.length === undefined) {
-            return alert("Name must be at least 3 characters");
-        } else if (pokemonName.length === NaN) {
-            return alert("Name must be at least 3 characters");
-        } else if (pokemonName.length === "") {
-            return alert("Name must be at least 3 characters");
-        } else if (pokemonName.length === 0) {
-            return alert("Name must be at least 3 characters");
-        } else if (pokemonName.length === " ") {
-            return alert("Name must be at least 3 characters");
-        } else if (pokemonName.length === "  ") {
-            return alert("Name must be at least 3 characters");
-        } else {
-            setCatchPokemon(pokemonName);
-        }
-    }
+
     //making modal
     const [modal, setModal] = useState(false);
     //modal2
