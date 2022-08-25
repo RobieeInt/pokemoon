@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import useLocalStorage from "./useLocalStorage";
 import { Link } from 'react-router-dom';
+import Navbar from "./Navbar";
     
     
 const Card = ({ pokemon, loading, infoPokemon}) => {
@@ -17,7 +18,7 @@ const Card = ({ pokemon, loading, infoPokemon}) => {
 
     return (
         <>
-        {
+            {
             loading ? <h1>Loading...</h1> :
                 pokemon.map((data, i) => {
                     return (

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useLocalStorage from "./useLocalStorage";
+import Navbar from "./Navbar";
 
 const InfoPokemon = () => {
    
@@ -49,6 +50,7 @@ const InfoPokemon = () => {
             {
                 (!pokemon) ? <h1>Loading...</h1> :(
                     <>
+                        <Navbar />
                         <h1>{pokemon.name}</h1>
                         <img className="info-pokemon-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`} alt="" />
                         <h2><button className="btn-catch" onClick={() => {

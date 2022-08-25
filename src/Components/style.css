@@ -12,7 +12,7 @@ body{
 }
 
 .container{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     paddint-top: 100px;
     display: flex;
@@ -255,4 +255,45 @@ body{
 .card h3{
     margin-left : 1rem;
     margin-right : 1rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: #00BFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-navbar{
+    outline: none;
+    border: none;
+    width: 150px;
+    padding: 0.3rem 0;
+    margin: 1rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    content-align: center;
+    text-transform: uppercase;
 }

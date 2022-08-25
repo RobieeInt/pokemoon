@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import useLocalStorage from "./useLocalStorage";
 import { Link } from 'react-router-dom';
+import Navbar from "./Navbar";
 
 const MyCollection = ({ data }) => {
    
@@ -18,7 +19,8 @@ const MyCollection = ({ data }) => {
     return (
         <>
             {(!catchPokemon) ? <h1>Loading...</h1> :(
-            <>
+                <>
+                    <Navbar />
                 <h1>My Pokeball</h1>
                 <div className="left-content">
                     {

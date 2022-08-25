@@ -4,6 +4,7 @@ import Card from "../Components/Card";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import Navbar from "../Components/Navbar";
 
 const Main = () => {
 
@@ -57,9 +58,11 @@ const Main = () => {
     
     return (
 
-        <div className="container">
-            <div className="left-content">
                 
+        <>
+            <Navbar />
+            <div className="container">
+            <div className="left-content">
                 {/* mypokemon page */}
                     <Card pokemon={pokeData} loading={loading} infoPokemon={poke => setPokeDex(poke)}  />
                 <div className="btn-group">
@@ -79,6 +82,7 @@ const Main = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 }
     
