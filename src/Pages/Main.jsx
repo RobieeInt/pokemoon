@@ -1,5 +1,4 @@
 import React from "react";
-import InfoPokemon from "../Components/InfoPokemon";
 import Card from "../Components/Card";
 import axios from "axios";
 import { useState, useEffect } from "react";

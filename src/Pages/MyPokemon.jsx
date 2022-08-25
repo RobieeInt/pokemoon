@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-import MyCollection from '../Components/MyCollection'
+import MyCollection from "../Components/MyCollection"
 
 const MyPokemon = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import useLocalStorage from "./useLocalStorage";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const MyCollection = ({ data }) => {

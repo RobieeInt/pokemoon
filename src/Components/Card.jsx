@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import useLocalStorage from "./useLocalStorage";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
     
     
 const Card = ({ pokemon, loading, infoPokemon}) => {
