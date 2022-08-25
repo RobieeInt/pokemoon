@@ -27,9 +27,8 @@ const MyCollection = ({ data }) => {
                                 <Link to={`/detail/${data.id}`}> 
                                 <div className="card">
                                         <h3>{data.Own}</h3>
-                                                <img src={data.pokemonData.sprites.front_default} alt="" />
-                                                <h3>{data.pokemonData.name}</h3>
-                                                {/* button delete Own */}
+                                            <img src={data.pokemonData.sprites.front_default} alt="" />
+                                        <h3>{data.pokemonData.name}</h3>
                                 </div>
                                 </Link>
                             </div>
