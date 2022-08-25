@@ -50,9 +50,7 @@ const InfoPokemon = () => {
     // console.log(randomValueget);
 
 
-    //making modal
     const [modal, setModal] = useState(false);
-    //modal2
     const [modal2, setModal2] = useState(false);
 
     const toggleModal2 = () => {
@@ -81,14 +79,9 @@ const InfoPokemon = () => {
                         <img className="info-pokemon-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`} alt="" />
                         <h2><button className="btn-catch" onClick={toggleModal}>Modal</button></h2>
                         <h2><button className="btn-catch" onClick={() => {
-                            //check random value with 50 percent
                             if (randomValueget > 50) {
                                 
                                 toggleModal2();
-                                //giving name to pokemon
-                                // const Own = window.prompt("congrats u catch this pokemon, Enter your Pokemon name");
-                                //store data to local storage
-                                // setCatchPokemon([...catchPokemon, { Own: Own, pokemonData: pokemon }]);
                                 if (pokemonName.length < 1) {
                                     return alert("Please enter a name");
                                 } else if (pokemonName.length === '') {
@@ -107,18 +100,8 @@ const InfoPokemon = () => {
                                 
 
                             } else {
-                                // alert("Dang! you missed this pokemon");
                                  toggleModal();
                             }
-                            // windows prompt giving name to pokemon and must be unique in local storage
-                            // const Own = window.prompt("Enter your Pokemon name");
-                            //Map Own pokemon from local storage
-                            // const Own = window.prompt("Enter your Pokemon name");
-                            //push new pokemon to local storage
-                                // concat namePokemon to catchPokemon name pokemon must be unique
-                            
-                            //reload page every time when catch pokemon so it will show new random value
-                            // window.location.reload();
                             }
                             }>Catch This Pokemon</button>
                         </h2>
@@ -161,12 +144,10 @@ const InfoPokemon = () => {
                                         )})
                         }
                         </div>
-                        {/* divider */}
             <div className="divider"></div>
                 <h2>Moves</h2>
                     <div className="moves">
                 {
-                  // data moves ascending
                     pokemon.moves.sort((a, b) => {
                          if (a.move.name < b.move.name) {
                                 return -1;
@@ -188,7 +169,6 @@ const InfoPokemon = () => {
             </div>
                         <div className="divider"></div>
                         
-                        {/* modal */}
                         {
                             modal && (
                                 <div className="modal">
@@ -217,33 +197,22 @@ const InfoPokemon = () => {
                                 <div onClick={toggleModal2} className="overlay"></div>
                                 <div className="modal-content">
                                         <h2>Yeeay {pokemon.name} !!!</h2>
-                                        {/* img pokemon */}
                                         <img className="info-pokemon-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`} alt="" />
                                         <p>
                                             Nice Catch Bro !
                                         </p>
-                                        {/* //input name pokemon */}
                                         <input type="text" placeholder="Enter your Pokemon name" onChange={(e) => {
                                             setPokemonName(e.target.value);
                                         }
                                         } />
-
-                    
-                                        {/* //input name pokemon with handleInputValidation */}
-                                        {/* <input type="text" placeholder="Enter your Pokemon name" onChange={handleInputvalidation} /> */}
-                                        
-                                        {/* //save button */}
                                         <button className="save-modal" onClick={() => {
-                                            //save name to local storage
                                             setCatchPokemon([...catchPokemon, { Own: pokemonName, pokemonData: pokemon }]);
-                                            //relaod page and setpokemon name to null
                                             window.location.reload();
                                             pokemonName('');
                                         }
                                         }>
                                             SAVE
                                         </button>
-                                        {/* button close and reload page */}
                                         <button className="close-modal" onClick={() => {
                                             window.location.reload();
                                             pokemonName('');
